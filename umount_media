@@ -1,0 +1,2 @@
+#!/bin/bash
+pumount "$(ls -d /media/*|dmenu -p "umount:" )"

@@ -151,12 +151,12 @@ while True:
         realdevice = join('/dev/', basename(readlink(device)))
 
         if realdevice[-1] in '0123456789':
-            if messagebox.askyesno('Magic Mounter', 'Mount: {}'.format(devicename)):
+            if messagebox.askyesno('Disk Mounter', 'Mount: {}'.format(devicename)):
                 p = run(['pmount', '-A', realdevice], stderr=PIPE)
                 if p.returncode:
-                    x = messagebox.showerror('Magic Mounter', p.stderr)
+                    x = messagebox.showerror('Disk Mounter', p.stderr)
                 else:
-                    if(messagebox.askyesno('Magic Mounter',
+                    if(messagebox.askyesno('Disk Mounter',
                         'Should I open that in your file manager?')):
                         tk.update_idletasks()
                         Popen(['xdg-open', join('/media', basename(realdevice))])

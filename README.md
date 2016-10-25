@@ -1,3 +1,5 @@
+# Dan's Disk Mounter
+
 When you plug in a USB disk, pop up a dialog asking if you want to mount it.
 If you say yes, mount it (using pmount).
 Then ask if you want to open it with xdg-open (nautilus?)
